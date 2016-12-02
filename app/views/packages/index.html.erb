@@ -1,0 +1,8 @@
+<h1>All Packages</h1>
+
+<ul>
+<% @packages.each do |package| %>
+    <%= render "package_row", package: package  %>
+    </br>
+<% end %> 
+</ul>

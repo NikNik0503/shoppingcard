@@ -1,0 +1,35 @@
+
+
+
+<div class="row">
+  <div class="col-xs-6">
+    <h1> <%= @package.name %> </h1>
+  </div>
+  <div class="col-xs-2 col-xs-offset-4">
+   <h1> <%= @package.packageprice %>$</h1>
+    including: </br>
+    <% @bundles.each do |bundle| %>
+       <%= bundle.amount %> 
+      <%= bundle.product.name %> </br>
+    <% end %>
+    
+   </div>
+</div>
+
+
+    
+
+<div class="row">
+  <div class="col-xs-6 col-xs-offset-3">
+    <% @packproducts.each do |product| %>
+      <%= render "product_row", product: product, order_item: @order_item %>
+      
+    <% end %>
+  </div>
+</div>
+
+ <% @bundles.each do |bundle| %>
+       <%= bundle.id %>
+      <%= bundle.product.name %> </br>
+      <%= bundle.amount %>
+    <% end %>

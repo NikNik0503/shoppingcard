@@ -1,0 +1,15 @@
+<h1>all bundles</h1>
+
+
+<%= @bundles.count %>
+
+<div class="row">
+  <div class="col-xs-6 col-xs-offset-3">
+    <% @bundles.each do |bundle| %>
+       <%= bundle.id %>
+       <%= link_to(bundle.id, edit_package_bundle_path(id: bundle.id)) %>
+      <%= bundle.product.name %> </br>
+      <%= bundle.amount %>
+    <% end %>
+  </div>
+</div>

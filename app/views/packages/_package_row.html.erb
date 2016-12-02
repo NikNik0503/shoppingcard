@@ -1,0 +1,18 @@
+<div class="well">
+
+  <div class="row">
+    <div class="col-xs-2">
+      <h4><%= link_to(package.name, package_path(package)) %>  </small></h4> 
+    </div>
+     <div class="col-xs-3 col-xs-offset-6">
+       <h4><%= package.packageprice%>$</h4>
+      <% @bundles = package.bundles %>
+        including: </br>
+        <% @bundles.each do |bundle| %>
+       <%= bundle.amount %> 
+      <%= bundle.product.name %> </br>
+      <% end %>
+
+    </div>
+    </div>
+</div>

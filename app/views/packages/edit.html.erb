@@ -1,0 +1,12 @@
+<h1>up</h1>
+
+<ul>
+<% @bundles.each do |bundle| %>
+<%= bundle.package.id %>
+<%= bundle.id %>
+    <%= bundle.product.id %> for
+    <%= bundle.amount %> </br>
+<% end %> 
+</ul>
+
+<%= link_to(edit_package_bundle_path(package_id: @package.id)) %>

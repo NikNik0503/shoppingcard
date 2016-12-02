@@ -1,0 +1,21 @@
+<h1>fequen</h1>
+
+
+<div class="row">
+  <div class="col-xs-6 col-xs-offset-3">
+    <% @frequencies.each do |frequency| %>
+      <%= frequency.id %> </br>
+    <% end %>
+  </div>
+</div>
+
+
+
+
+<div class="row">
+  <div class="col-xs-6 col-xs-offset-3">
+    <% @packproducts.each do |product| %>
+      <%= product.name %>
+    <% end %>
+  </div>
+</div>

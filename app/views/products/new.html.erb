@@ -1,0 +1,22 @@
+<h1>create new product</h1>
+
+<%= form_for(@product) do |f| %>
+  <p>
+    <%= f.label :name %><br/>
+    <%= f.text_field :name %> <br/> 
+  </p>
+  <p>
+    <%= f.label :price %> <br/>
+    <%= f.text_field :price %> <br/> 
+  </p>
+  <li>
+  <%= f.collection_check_boxes(:package_ids, Package.all, :id, :name) %>
+  </li>
+  <li>
+  <%= f.collection_check_boxes(:category_ids, Category.all, :id, :name) %>
+  </li>
+  
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

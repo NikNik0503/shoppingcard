@@ -1,0 +1,13 @@
+<h1>edit bundle <%= @bundle.id %></h1>
+
+
+
+<%= form_for (@bundle) do |f| %>  
+  <p>
+    <%= f.label :amount %><br/>
+    <%= f.text_field :amount %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
